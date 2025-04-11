@@ -7,6 +7,7 @@ import { ListGroupComponent } from './components/list-group/list-group.component
 import { InputSearchComponent } from './components/input-search/input-search.component';
 // Local data and assets
 import agenda from '../agenda.json';
+import { AddContactFormComponent } from './pages/add-contact-form/add-contact-form.component';
 
 interface Contact {
   id: number;
@@ -22,6 +23,7 @@ interface Contact {
     HeaderComponent,
     ListGroupComponent,
     InputSearchComponent,
+    AddContactFormComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

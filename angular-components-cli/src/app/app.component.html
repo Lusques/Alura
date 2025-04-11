@@ -1,4 +1,10 @@
 <main class="main">
+  <div class="mb-5">
+    <app-container>
+      <app-header></app-header>
+      <app-add-contact-form></app-add-contact-form>
+    </app-container>
+  </div>
   <app-container>
     <app-header></app-header>
     <app-input-search (getInputText)="getInputSearchValue($event)" />

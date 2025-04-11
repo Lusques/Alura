@@ -1,0 +1,40 @@
+@use "../../../styles/variables" as *;
+.form {
+  &__text {
+    &--h3 {
+      color: $angular-red-dark;
+      font-size: 32px;
+      font-weight: bold;
+      margin: auto;
+      width: fit-content;
+    }
+  }
+  &__buttons {
+    &--a {
+      color: $angular-red-dark;
+      font-size: 21px;
+      text-decoration: none;
+    }
+    &--container {
+      display: flex;
+      margin: auto;
+      padding-top: 32px;
+    }
+    &--edit {
+      border: solid 1px $angular-black;
+      color: $angular-black;
+      &:hover {
+        background-color: $angular-black;
+        color: white;
+      }
+    }
+    &--delete {
+      border: solid 1px $angular-red;
+      color: $angular-red;
+      &:hover {
+        background-color: $angular-red;
+        color: white;
+      }
+    }
+  }
+}
