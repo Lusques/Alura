@@ -4,12 +4,11 @@
       {{ title }}
     </h3>
   </li>
+  @for (contact of filterContactsByLetter(title); track contact.id) {
   <li class="list-group-item">
     <div class="d-flex justify-content-between">
-      <div class="d-flex gap-5">
-        <p class="list__item--p">Nome</p>
-        <p class="list__item--p">Telefone</p>
-      </div>
+      <p class="list__item--p">{{ contact.nome }}</p>
+      <p class="list__item--p">{{ contact.telefone }}</p>
       <div
         class="btn-group"
         role="group"
@@ -24,5 +23,6 @@
       </div>
     </div>
   </li>
+  }
 </ul>
 <hr />

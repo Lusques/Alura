@@ -17,4 +17,9 @@ interface Contact {
 export class ListGroupComponent {
   @Input() title: string = '';
   contacts: Contact[] = agenda;
+  filterContactsByLetter(letter: string): Contact[] {
+    return this.contacts.filter((contact) =>
+      contact.nome.toLowerCase().startsWith(letter)
+    );
+  }
 }
