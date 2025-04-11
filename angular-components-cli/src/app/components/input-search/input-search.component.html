@@ -5,6 +5,7 @@
     placeholder=""
     type="text"
     [(ngModel)]="inputText"
+    (ngModelChange)="onInputChange()"
   />
   <label for="floatingInput">Pesquisar por nome</label>
 </div>

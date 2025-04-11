@@ -13,11 +13,15 @@ import { InputSearchComponent } from './components/input-search/input-search.com
     ContainerComponent,
     HeaderComponent,
     ListGroupComponent,
-    InputSearchComponent
+    InputSearchComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
   alphabet: string = 'abcdefghijklmnopqrstuvwxyz';
+  inputSearchValue: string = '';
+  getInputSearchValue($value: string) {
+    this.inputSearchValue = $value;
+  }
 }
