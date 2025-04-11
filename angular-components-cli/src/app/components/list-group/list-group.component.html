@@ -1,10 +1,10 @@
 <ul class="list-group">
   <li class="list-group-item active" aria-current="true">
     <h3 class="list__item--h3">
-      {{ title }}
+      {{ letter }}
     </h3>
   </li>
-  @for (contact of filterContactsByLetter(title); track contact.id) {
+  @for (contact of filterContactsByLetter(letter); track contact.id) {
   <li class="list-group-item">
     <div class="d-flex justify-content-between">
       <p class="list__item--p">{{ contact.nome }}</p>

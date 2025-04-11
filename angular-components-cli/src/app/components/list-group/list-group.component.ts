@@ -1,7 +1,4 @@
-// Angular imports
 import { Component, Input } from '@angular/core';
-// Local data and assets
-import agenda from '../../../agenda.json';
 
 interface Contact {
   id: number;
@@ -17,10 +14,11 @@ interface Contact {
   styleUrl: './list-group.component.scss',
 })
 export class ListGroupComponent {
-  @Input() title: string = '';
-  contacts: Contact[] = agenda;
+  @Input() letter: string = '';
+  @Input() agenda: Contact[] = [];
+
   filterContactsByLetter(letter: string): Contact[] {
-    return this.contacts.filter((contact) =>
+    return this.agenda.filter((contact) =>
       contact.nome.toLowerCase().startsWith(letter)
     );
   }

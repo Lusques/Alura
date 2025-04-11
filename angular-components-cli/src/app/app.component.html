@@ -3,7 +3,7 @@
     <app-header></app-header>
     <app-input-search (getInputText)="getInputSearchValue($event)" />
     @for (letter of alphabet; track letter) {
-    <app-list-group [title]="letter"></app-list-group>
+    <app-list-group [letter]="letter" [agenda]="agendaJson"></app-list-group>
     }
   </app-container>
 </main>
