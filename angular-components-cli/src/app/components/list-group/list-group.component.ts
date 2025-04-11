@@ -1,4 +1,6 @@
+// Angular imports
 import { Component, Input } from '@angular/core';
+// Local data and assets
 import agenda from '../../../agenda.json';
 
 interface Contact {

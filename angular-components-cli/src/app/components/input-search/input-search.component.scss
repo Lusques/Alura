@@ -1,0 +1,7 @@
+@use "../../../styles/variables" as *;
+.form-control {
+  &:focus {
+    box-shadow: 0 0 8px $angular-pink;
+    border-color: $angular-pink;
+  }
+}
