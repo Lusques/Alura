@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SeparatorComponent } from './separator.component';
+import { ListGroupComponent } from './list-group.component';
 
-describe('SeparatorComponent', () => {
-  let component: SeparatorComponent;
-  let fixture: ComponentFixture<SeparatorComponent>;
+describe('ListGroupComponent', () => {
+  let component: ListGroupComponent;
+  let fixture: ComponentFixture<ListGroupComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SeparatorComponent]
+      imports: [ListGroupComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SeparatorComponent);
+    fixture = TestBed.createComponent(ListGroupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

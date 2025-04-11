@@ -1,0 +1,40 @@
+@use "../../../styles/variables" as *;
+.list-group {
+  .list-group-item {
+    &:first-child {
+      border-color: $angular-red;
+    }
+    &.active {
+      background-color: $angular-red;
+    }
+  }
+}
+.list {
+  &__item {
+    &--h3 {
+      text-transform: uppercase;
+    }
+    &--p {
+    }
+  }
+}
+.btn {
+  &__outline {
+    &--edit {
+      border: solid 1px $angular-black;
+      color: $angular-black;
+      &:hover {
+        background-color: $angular-black;
+        color: white;
+      }
+    }
+    &--delete {
+      border: solid 1px $angular-red;
+      color: $angular-red;
+      &:hover {
+        background-color: $angular-red;
+        color: white;
+      }
+    }
+  }
+}

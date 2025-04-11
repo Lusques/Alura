@@ -1,5 +1,8 @@
 <main class="main">
   <app-container>
     <app-header></app-header>
+    @for (letter of alphabet; track letter) {
+    <app-list-group [title]="letter"></app-list-group>
+    }
   </app-container>
 </main>
