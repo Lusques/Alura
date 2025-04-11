@@ -1,4 +1,11 @@
 import { Component, Input } from '@angular/core';
+import agenda from '../../../agenda.json';
+
+interface Contact {
+  id: number;
+  nome: string;
+  telefone: string;
+}
 
 @Component({
   selector: 'app-list-group',
@@ -9,4 +16,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ListGroupComponent {
   @Input() title: string = '';
+  contacts: Contact[] = agenda;
 }
