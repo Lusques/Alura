@@ -7,7 +7,7 @@ import { ListGroupComponent } from './components/list-group/list-group.component
 import { InputSearchComponent } from './components/input-search/input-search.component';
 // Local data and assets
 import agenda from '../agenda.json';
-import { AddContactFormComponent } from './pages/add-contact-form/add-contact-form.component';
+import { AddContactFormComponent } from './components/add-contact-form/add-contact-form.component';
 
 interface Contact {
   id: number;
