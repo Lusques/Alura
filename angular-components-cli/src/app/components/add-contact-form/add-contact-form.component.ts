@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import {
   FormControl,
   FormGroup,
@@ -9,7 +10,7 @@ import {
 @Component({
   selector: 'app-add-contact-form',
   standalone: true,
-  imports: [ReactiveFormsModule, NgClass],
+  imports: [ReactiveFormsModule, NgClass, RouterLink],
   templateUrl: './add-contact-form.component.html',
   styleUrl: './add-contact-form.component.scss',
 })

@@ -1,5 +1,13 @@
-<app-header></app-header>
 <app-input-search (getInputText)="getInputSearchValue($event)" />
+<button
+  type="button"
+  class="btn btn__outline--new"
+  routerLink="/form"
+  routerLinkActive="router-link-active"
+>
+  <i class="bi bi-person-add"></i>
+  Adicionar novo contato
+</button>
 @for (letter of alphabet; track letter) {
 <app-list-group
   [letter]="letter"

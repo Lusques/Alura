@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AddContactFormComponent } from './components/add-contact-form/add-contact-form.component';
 import { AddContactComponent } from './pages/add-contact/add-contact.component';
 import { ContactsListComponent } from './pages/contacts-list/contacts-list.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { ContactsListComponent } from './pages/contacts-list/contacts-list.compo
     AddContactFormComponent,
     AddContactComponent,
     ContactsListComponent,
+    RouterOutlet,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

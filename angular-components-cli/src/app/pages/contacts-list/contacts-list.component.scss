@@ -1,0 +1,11 @@
+@use "../../../styles/variables" as *;
+.btn {
+  &__outline {
+    &--new {
+      border: 1px solid $angular-black;
+      color: $angular-black;
+      display: block;
+      margin: 0 auto 48px;
+    }
+  }
+}
