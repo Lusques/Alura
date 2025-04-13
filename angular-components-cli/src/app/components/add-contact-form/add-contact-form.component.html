@@ -4,7 +4,7 @@
     Voltar
   </a>
   <h3 class="form__text--h3">Adicionar contato</h3>
-  <form action="">
+  <form [formGroup]="contactForm">
     <fieldset class="d-flex flex-column gap-4">
       <div class="input-group flex-nowrap">
         <span class="input-group-text" id="addon-wrapping">
@@ -16,6 +16,7 @@
           placeholder="Nome"
           aria-label="Nome"
           aria-describedby="addon-wrapping"
+          formControlName="name"
         />
       </div>
       <div class="input-group flex-nowrap">
@@ -28,6 +29,7 @@
           placeholder="Username"
           aria-label="Username"
           aria-describedby="addon-wrapping"
+          formControlName="telphone"
         />
       </div>
       <div class="input-group flex-nowrap">
@@ -40,6 +42,7 @@
           placeholder="Email"
           aria-label="Email"
           aria-describedby="addon-wrapping"
+          formControlName="email"
         />
       </div>
     </fieldset>
@@ -55,6 +58,7 @@
           placeholder="Data de nascimento"
           aria-label="Data de nascimento"
           aria-describedby="addon-wrapping"
+          formControlName="birth"
         />
       </div>
       <div class="input-group flex-nowrap">
@@ -67,11 +71,12 @@
           placeholder="Adicione o URL da página"
           aria-label="Adicione o URL da página"
           aria-describedby="addon-wrapping"
+          formControlName="url"
         />
       </div>
       <div class="input-group flex-nowrap">
         <span class="input-group-text" id="addon-wrapping">
-          <i class="bi bi-link"></i>
+          <i class="bi bi-journals"></i>
         </span>
         <textarea
           type="text"
@@ -79,6 +84,7 @@
           placeholder="Coloque observações nesse espaço.  Exemplo: “Instrutora da academia “Nova Imagem”, amiga da Júlia”."
           aria-label="Coloque observações nesse espaço.  Exemplo: “Instrutora da academia “Nova Imagem”, amiga da Júlia”."
           aria-describedby="addon-wrapping"
+          formControlName="observations"
         ></textarea>
       </div>
     </fieldset>
