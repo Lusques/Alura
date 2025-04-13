@@ -29,7 +29,7 @@ export class ListGroupComponent implements OnInit {
   filterContactsByLetter(letter: string): Contact[] {
     const filteredAgenda = this.filterBySearchBar();
     return filteredAgenda.filter((contact) =>
-      contact.nome.toLowerCase().startsWith(letter)
+      contact.nome?.toLowerCase().startsWith(letter)
     );
   }
   filterBySearchBar(): Contact[] {

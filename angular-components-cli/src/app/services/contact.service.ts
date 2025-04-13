@@ -23,6 +23,12 @@ export class ContactService {
     localStorage.setItem('contacts', JSON.stringify(this.contacts));
   }
 
+  createContact(contact: Contact) {
+    this.contacts.push(contact);
+    console.log(this.contacts);
+    localStorage.setItem('contacts', JSON.stringify(this.contacts));
+  }
+
   getContacts() {
     return this.contacts;
   }

@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
   FormControl,
@@ -7,6 +7,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { ContactService } from '../../services/contact.service';
 @Component({
   selector: 'app-add-contact-form',
   standalone: true,
@@ -14,23 +15,29 @@ import {
   templateUrl: './add-contact-form.component.html',
   styleUrl: './add-contact-form.component.scss',
 })
-export class AddContactFormComponent {
+export class AddContactFormComponent implements OnInit {
   contactForm!: FormGroup;
 
-  constructor() {
+  constructor(private contactService: ContactService) {}
+
+  ngOnInit(): void {
+    this.initializeForm();
+  }
+
+  initializeForm() {
     this.contactForm = new FormGroup({
-      name: new FormControl('Lucas Silva', [Validators.required]),
-      telphone: new FormControl('99 99999-9999', [Validators.required]),
+      nome: new FormControl('', [Validators.required]),
+      telefone: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      birth: new FormControl('2025-04-13'),
-      url: new FormControl('https://github.com/Lusques'),
-      observations: new FormControl('Hello World!'),
+      birth: new FormControl(''),
+      url: new FormControl(''),
+      observations: new FormControl(''),
     });
   }
 
   createContact() {
     if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
+      this.contactService.createContact(this.contactForm.value);
     }
   }
   submitCancel() {
