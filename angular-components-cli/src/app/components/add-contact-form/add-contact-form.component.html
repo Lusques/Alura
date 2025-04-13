@@ -4,46 +4,70 @@
     Voltar
   </a>
   <h3 class="form__text--h3">Adicionar contato</h3>
-  <form [formGroup]="contactForm">
+  <form [formGroup]="contactForm" (ngSubmit)="createContact()">
     <fieldset class="d-flex flex-column gap-4">
-      <div class="input-group flex-nowrap">
-        <span class="input-group-text" id="addon-wrapping">
-          <i class="bi bi-person"></i>
-        </span>
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Nome"
-          aria-label="Nome"
-          aria-describedby="addon-wrapping"
-          formControlName="name"
-        />
+      <div>
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">
+            <i class="bi bi-person"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nome"
+            aria-label="Nome"
+            aria-describedby="addon-wrapping"
+            formControlName="name"
+          />
+        </div>
+        @if (contactForm.get('name')?.errors &&
+        contactForm.get('name')?.touched) {
+        <span class="form__text--error">Informe um nome válido</span>
+        }
       </div>
-      <div class="input-group flex-nowrap">
-        <span class="input-group-text" id="addon-wrapping">
-          <i class="bi bi-telephone"></i>
-        </span>
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Username"
-          aria-label="Username"
-          aria-describedby="addon-wrapping"
-          formControlName="telphone"
-        />
+      <div>
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">
+            <i class="bi bi-telephone"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+            formControlName="telphone"
+          />
+        </div>
+        @if (contactForm.get('telphone')?.errors &&
+        contactForm.get('telphone')?.touched) {
+        <span class="form__text--error">Informe um telefone válido</span>
+        }
       </div>
-      <div class="input-group flex-nowrap">
-        <span class="input-group-text" id="addon-wrapping">
-          <i class="bi bi-envelope"></i>
-        </span>
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Email"
-          aria-label="Email"
-          aria-describedby="addon-wrapping"
-          formControlName="email"
-        />
+      <div>
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">
+            <i class="bi bi-envelope"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Email"
+            aria-label="Email"
+            aria-describedby="addon-wrapping"
+            formControlName="email"
+          />
+        </div>
+        @if (contactForm.get('email')?.errors?.['required'] &&
+        contactForm.get('email')?.touched) {
+        <span class="form__text--error">Campo obrigatório</span>
+        }
+        <!--  -->
+        @if (contactForm.get('email')?.errors?.['email'] &&
+        contactForm.get('email')?.touched) {
+        <span class="form__text--error">Formato de email inválido</span>
+
+        }
       </div>
     </fieldset>
     <hr />
@@ -93,10 +117,19 @@
       role="group"
       aria-label="Basic outlined example"
     >
-      <button type="button" class="btn form__buttons--delete">
+      <button
+        type="button"
+        class="btn form__buttons--delete"
+        (click)="submitCancel()"
+      >
         <i class="bi bi-x-lg"></i> Cancelar
       </button>
-      <button type="button" class="btn form__buttons--edit">
+      <button
+        type="submit"
+        [ngClass]="contactForm.invalid ? 'form__buttons--invalid' : ''"
+        class="btn form__buttons--edit"
+        [disabled]="contactForm.invalid"
+      >
         <i class="bi bi-cloud-plus"></i>
         Salvar contato
       </button>

@@ -8,6 +8,12 @@
       margin: auto;
       width: fit-content;
     }
+    &--error {
+      color: $angular-red;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
   }
   &__buttons {
     &--a {
@@ -35,6 +41,10 @@
         background-color: $angular-red;
         color: white;
       }
+    }
+    &--invalid {
+      border-color: $angular-red-dark;
+      color: $angular-red-dark;
     }
   }
 }
