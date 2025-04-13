@@ -20,10 +20,7 @@ export class AddContactFormComponent {
     this.contactForm = new FormGroup({
       name: new FormControl('Lucas Silva', [Validators.required]),
       telphone: new FormControl('99 99999-9999', [Validators.required]),
-      email: new FormControl('', [
-        Validators.required,
-        Validators.email,
-      ]),
+      email: new FormControl('', [Validators.required, Validators.email]),
       birth: new FormControl('2025-04-13'),
       url: new FormControl('https://github.com/Lusques'),
       observations: new FormControl('Hello World!'),

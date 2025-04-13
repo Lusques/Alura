@@ -1,19 +1,9 @@
 <main class="main">
-  <div class="mb-5">
-    <app-container>
-      <app-header></app-header>
-      <app-add-contact-form></app-add-contact-form>
-    </app-container>
-  </div>
   <app-container>
-    <app-header></app-header>
-    <app-input-search (getInputText)="getInputSearchValue($event)" />
-    @for (letter of alphabet; track letter) {
-    <app-list-group
-      [letter]="letter"
-      [agenda]="agendaJson"
-      [searchValue]="inputSearchValue"
-    ></app-list-group>
-    }
+    <app-add-contact></app-add-contact>
+  </app-container>
+  <br />
+  <app-container>
+    <app-contacts-list></app-contacts-list>
   </app-container>
 </main>
