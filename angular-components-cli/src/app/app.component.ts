@@ -4,9 +4,6 @@ import { CommonModule } from '@angular/common';
 import { ContainerComponent } from './components/container/container.component';
 import { HeaderComponent } from './components/header/header.component';
 // Local data and assets
-import { AddContactFormComponent } from './components/add-contact-form/add-contact-form.component';
-import { AddContactComponent } from './pages/add-contact/add-contact.component';
-import { ContactsListComponent } from './pages/contacts-list/contacts-list.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -16,9 +13,6 @@ import { RouterOutlet } from '@angular/router';
     CommonModule,
     ContainerComponent,
     HeaderComponent,
-    AddContactFormComponent,
-    AddContactComponent,
-    ContactsListComponent,
     RouterOutlet,
   ],
   templateUrl: './app.component.html',

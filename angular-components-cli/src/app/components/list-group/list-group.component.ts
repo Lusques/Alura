@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ContactService } from '../../services/contact.service';
 
 interface Contact {
   id: number;
@@ -13,10 +14,17 @@ interface Contact {
   templateUrl: './list-group.component.html',
   styleUrl: './list-group.component.scss',
 })
-export class ListGroupComponent {
+export class ListGroupComponent implements OnInit {
   @Input() letter: string = '';
-  @Input() agenda: Contact[] = [];
+  // @Input() agenda: Contact[] = [];
   @Input() searchValue: string = '';
+  agenda: Contact[] = [];
+
+  constructor(private contactsService: ContactService) {}
+
+  ngOnInit(): void {
+    this.agenda = this.contactsService.getContacts();
+  }
 
   filterContactsByLetter(letter: string): Contact[] {
     const filteredAgenda = this.filterBySearchBar();

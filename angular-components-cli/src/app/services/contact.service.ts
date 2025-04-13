@@ -11,10 +11,14 @@ interface Contact {
 })
 export class ContactService {
   private contacts: Contact[] = agenda;
-  constructor() {
-    const contactsLS = JSON.parse(localStorage.getItem('contacts') || '');
 
-    this.contacts = contactsLS || null;
+  constructor() {
+    const contactsLSString: string | null = localStorage.getItem('contacts');
+    const contactsLS: Contact[] = contactsLSString
+      ? JSON.parse(contactsLSString)
+      : [];
+
+    this.contacts = contactsLS;
 
     localStorage.setItem('contacts', JSON.stringify(this.contacts));
   }
