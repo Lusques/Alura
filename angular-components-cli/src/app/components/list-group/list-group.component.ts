@@ -38,8 +38,8 @@ export class ListGroupComponent implements OnInit {
     }
     const search = this.removeAccents(this.searchValue.toLowerCase());
     const filteredAgenda = this.agenda.filter((contact) => {
-      const name = this.removeAccents(contact.nome.toLowerCase());
-      return name.includes(search);
+      const name = this.removeAccents(contact.nome?.toLowerCase());
+      return name?.includes(search);
     });
     return filteredAgenda;
   }
@@ -48,6 +48,7 @@ export class ListGroupComponent implements OnInit {
   }
 
   removeAccents(value: string): string {
-    return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    // return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    return value?.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
 }
