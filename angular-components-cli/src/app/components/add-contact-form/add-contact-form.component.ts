@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import {
   FormControl,
   FormGroup,
@@ -8,6 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { ContactService } from '../../services/contact.service';
+import { routes } from '../../app.routes';
 @Component({
   selector: 'app-add-contact-form',
   standalone: true,
@@ -18,7 +19,7 @@ import { ContactService } from '../../services/contact.service';
 export class AddContactFormComponent implements OnInit {
   contactForm!: FormGroup;
 
-  constructor(private contactService: ContactService) {}
+  constructor(private contactService: ContactService, private router: Router) {}
 
   ngOnInit(): void {
     this.initializeForm();
@@ -38,6 +39,8 @@ export class AddContactFormComponent implements OnInit {
   createContact() {
     if (this.contactForm.valid) {
       this.contactService.createContact(this.contactForm.value);
+      this.contactForm.reset();
+      this.router.navigateByUrl('/contact-list');
     }
   }
   submitCancel() {

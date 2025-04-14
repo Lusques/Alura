@@ -4,6 +4,7 @@ import { InputSearchComponent } from '../../components/input-search/input-search
 import { ListGroupComponent } from '../../components/list-group/list-group.component';
 import { RouterLink } from '@angular/router';
 import Contact from '../../models/contact';
+import { ContactService } from '../../services/contact.service';
 @Component({
   selector: 'app-contacts-list',
   standalone: true,
@@ -15,6 +16,11 @@ export class ContactsListComponent {
   alphabet: string = 'abcdefghijklmnopqrstuvwxyz';
   inputSearchValue: string = '';
   agendaJson: Contact[] = agenda;
+  constructor(private contactService: ContactService) {}
+
+  resetAgenda() {
+    this.contactService.setContactsToEmpty();
+  }
   getInputSearchValue($value: string) {
     this.inputSearchValue = $value;
   }

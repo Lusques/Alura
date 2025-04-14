@@ -1,22 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import Contact from '../models/contact';
 import agenda from '../../agenda.json';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ContactService {
+export class ContactService implements OnInit {
   private contacts: Contact[] = agenda;
 
-  constructor() {
-    const contactsLSString: string | null = localStorage.getItem('contacts');
-    const contactsLS: Contact[] = contactsLSString
-      ? JSON.parse(contactsLSString)
-      : [];
-
-    this.contacts = contactsLS;
-
-    localStorage.setItem('contacts', JSON.stringify(this.contacts));
+  ngOnInit(): void {
+    this.saveContactsToLocalStorage();
+    this.loadContactsFromLocalStorage();
   }
 
   createContact(contact: Contact) {
@@ -24,8 +18,22 @@ export class ContactService {
     console.log(this.contacts);
     localStorage.setItem('contacts', JSON.stringify(this.contacts));
   }
+  saveContactsToLocalStorage() {
+    localStorage.setItem('contacts', JSON.stringify(this.contacts));
+  }
+  loadContactsFromLocalStorage() {
+    const contactsLSString: string | null = localStorage.getItem('contacts');
+    const contactsLS: Contact[] = contactsLSString
+      ? JSON.parse(contactsLSString)
+      : [];
+    this.contacts = contactsLS;
+  }
 
   getContacts() {
     return this.contacts;
+  }
+
+  setContactsToEmpty() {
+    localStorage.removeItem('contacts');
   }
 }
