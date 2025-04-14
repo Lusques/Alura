@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
+import Contact from '../models/contact';
 import agenda from '../../agenda.json';
-interface Contact {
-  id: number;
-  nome: string;
-  telefone: string;
-}
 
 @Injectable({
   providedIn: 'root',

@@ -1,12 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ContactService } from '../../services/contact.service';
-
-interface Contact {
-  id: number;
-  nome: string;
-  telefone: string;
-}
-
+import Contact from '../../models/contact';
 @Component({
   selector: 'app-list-group',
   standalone: true,
@@ -48,7 +42,6 @@ export class ListGroupComponent implements OnInit {
   }
 
   removeAccents(value: string): string {
-    // return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     return value?.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
 }

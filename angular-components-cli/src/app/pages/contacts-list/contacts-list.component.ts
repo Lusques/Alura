@@ -3,12 +3,7 @@ import { Component } from '@angular/core';
 import { InputSearchComponent } from '../../components/input-search/input-search.component';
 import { ListGroupComponent } from '../../components/list-group/list-group.component';
 import { RouterLink } from '@angular/router';
-
-interface Contact {
-  id: number;
-  nome: string;
-  telefone: string;
-}
+import Contact from '../../models/contact';
 @Component({
   selector: 'app-contacts-list',
   standalone: true,
