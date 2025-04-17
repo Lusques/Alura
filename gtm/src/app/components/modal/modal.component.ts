@@ -13,7 +13,7 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {
     this.gtm.pushEvent({
       event: 'page:page_viewed',
-      element: 'page:home',
+      pageName: 'home',
     });
   }
   onClickOpenModalButton() {
