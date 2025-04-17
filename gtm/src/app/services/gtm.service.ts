@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { GtmPushEvent } from './model/gtm.model';
 
 declare global {
   interface Window {
@@ -18,7 +19,7 @@ export class GtmService {
   constructor() {
     window.dataLayer = window.dataLayer || [];
   }
-  public pushEvent(event: Object): void {
+  public pushEvent(event: GtmPushEvent): void {
     try {
       window.dataLayer.push(event);
       console.log('[GTM] Evento enviado: ', event);
