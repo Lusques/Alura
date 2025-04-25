@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+body hr {
+  background: #e40035;
+  background: linear-gradient(90deg, #e40035 0%, #f60a48 24%, #f20755 35%, #dc087d 49%, #9717e7 75%, #6c00f5 100%);
+  border: none;
+  height: 3px;
+  margin: auto;
+  opacity: 1;
+}
+body main {
+  background: linear-gradient(90deg, #e40035 0%, #dc087d 50%, #6c00f5 100%);
+}
