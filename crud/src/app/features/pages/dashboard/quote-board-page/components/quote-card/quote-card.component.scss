@@ -1,0 +1,12 @@
+.quote-card {
+  background-color: var(--gray--400);
+  border-radius: 12px;
+  list-style-type: none;
+  max-width: 270px;
+  padding: 24px;
+  &__buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: end;
+  }
+}
