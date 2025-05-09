@@ -1,2 +1,11 @@
 .quote-page {
+  &__form {
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 auto 90px;
+    max-width: 600px;
+    padding: 48px 24px;
+  }
 }

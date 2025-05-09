@@ -1,44 +1,55 @@
-.bg__100 {
+:root {
+  --blue--100: #6366f1;
+  --blue--500: #101020;
+  --gray--100: #f1f1f1;
+  --gray--200: #9ca3af;
+  --gray--300: #71717a;
+  --gray--400: #27272c;
+  --gray--500: #18181b;
+  --white: #ffffff;
+}
+
+.bg__blue--100 {
   background-color: #6366f1;
 }
 
-.text__100 {
+.text__blue--100 {
   color: #6366f1;
 }
 
-.hover__bg-100 {
+.hover__bg-blue--100 {
   transition: 0.3s;
 }
-.hover__bg-100:hover {
+.hover__bg-blue--100:hover {
   background-color: #6366f1;
 }
 
-.hover__text-100 {
+.hover__text-blue--100 {
   transform: 0.3s;
 }
-.hover__text-100:hover {
+.hover__text-blue--100:hover {
   color: #6366f1;
 }
 
-.bg__500 {
+.bg__blue--500 {
   background-color: #101020;
 }
 
-.text__500 {
+.text__blue--500 {
   color: #101020;
 }
 
-.hover__bg-500 {
+.hover__bg-blue--500 {
   transition: 0.3s;
 }
-.hover__bg-500:hover {
+.hover__bg-blue--500:hover {
   background-color: #101020;
 }
 
-.hover__text-500 {
+.hover__text-blue--500 {
   transform: 0.3s;
 }
-.hover__text-500:hover {
+.hover__text-blue--500:hover {
   color: #101020;
 }
 
@@ -174,4 +185,8 @@
   color: #ffffff;
 }
 
-/*# sourceMappingURL=_mixins.css.map */
+.cursor__pointer {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=_classes.css.map */

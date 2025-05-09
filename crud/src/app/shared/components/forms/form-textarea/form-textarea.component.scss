@@ -1,5 +1,15 @@
 @use "../../../../../styles//variables" as *;
+.form-textarea {
+  & label {
+    &::after {
+      background-color: transparent;
+    }
+  }
+}
+
 .form-control {
   background-color: transparent;
   border-color: var(--gray--300);
+  height: 310px;
+  resize: none;
 }

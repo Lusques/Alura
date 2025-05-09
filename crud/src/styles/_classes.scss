@@ -3,6 +3,11 @@
 
 $all-maps: map.merge($map-blue-colors, $map-gray-colors);
 
+:root {
+  @each $key, $value in $all-maps {
+    --#{$key}: #{$value};
+  }
+}
 @each $key, $value in $all-maps {
   .bg__#{$key} {
     background-color: $value;

@@ -8,9 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FormInputComponent implements OnInit {
   @Input() id: string = 'floatingInput';
   @Input() label: string = 'Email address';
-  @Input() placeholder: string = 'name@example.com';
   @Input() type: string = 'text';
-  inputValue: string = 'exemplo';
+  fieldValue: string = '';
   constructor() {}
 
   ngOnInit(): void {}
