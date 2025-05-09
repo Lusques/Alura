@@ -1,0 +1,29 @@
+@use "./variables" as *;
+@use "sass:map";
+
+$all-maps: map.merge($map-blue-colors, $map-gray-colors);
+
+@each $key, $value in $all-maps {
+  .bg__#{$key} {
+    background-color: $value;
+  }
+  .text__#{$key} {
+    color: $value;
+  }
+  .hover__bg-#{$key} {
+    transition: 0.3s;
+    &:hover {
+      background-color: $value;
+    }
+  }
+  .hover__text-#{$key} {
+    transform: 0.3s;
+    &:hover {
+      color: $value;
+    }
+  }
+}
+
+.cursor__pointer {
+  cursor: pointer;
+}

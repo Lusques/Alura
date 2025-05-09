@@ -1,0 +1,177 @@
+.bg__100 {
+  background-color: #6366f1;
+}
+
+.text__100 {
+  color: #6366f1;
+}
+
+.hover__bg-100 {
+  transition: 0.3s;
+}
+.hover__bg-100:hover {
+  background-color: #6366f1;
+}
+
+.hover__text-100 {
+  transform: 0.3s;
+}
+.hover__text-100:hover {
+  color: #6366f1;
+}
+
+.bg__500 {
+  background-color: #101020;
+}
+
+.text__500 {
+  color: #101020;
+}
+
+.hover__bg-500 {
+  transition: 0.3s;
+}
+.hover__bg-500:hover {
+  background-color: #101020;
+}
+
+.hover__text-500 {
+  transform: 0.3s;
+}
+.hover__text-500:hover {
+  color: #101020;
+}
+
+.bg__gray--100 {
+  background-color: #f1f1f1;
+}
+
+.text__gray--100 {
+  color: #f1f1f1;
+}
+
+.hover__bg-gray--100 {
+  transition: 0.3s;
+}
+.hover__bg-gray--100:hover {
+  background-color: #f1f1f1;
+}
+
+.hover__text-gray--100 {
+  transform: 0.3s;
+}
+.hover__text-gray--100:hover {
+  color: #f1f1f1;
+}
+
+.bg__gray--200 {
+  background-color: #9ca3af;
+}
+
+.text__gray--200 {
+  color: #9ca3af;
+}
+
+.hover__bg-gray--200 {
+  transition: 0.3s;
+}
+.hover__bg-gray--200:hover {
+  background-color: #9ca3af;
+}
+
+.hover__text-gray--200 {
+  transform: 0.3s;
+}
+.hover__text-gray--200:hover {
+  color: #9ca3af;
+}
+
+.bg__gray--300 {
+  background-color: #71717a;
+}
+
+.text__gray--300 {
+  color: #71717a;
+}
+
+.hover__bg-gray--300 {
+  transition: 0.3s;
+}
+.hover__bg-gray--300:hover {
+  background-color: #71717a;
+}
+
+.hover__text-gray--300 {
+  transform: 0.3s;
+}
+.hover__text-gray--300:hover {
+  color: #71717a;
+}
+
+.bg__gray--400 {
+  background-color: #27272c;
+}
+
+.text__gray--400 {
+  color: #27272c;
+}
+
+.hover__bg-gray--400 {
+  transition: 0.3s;
+}
+.hover__bg-gray--400:hover {
+  background-color: #27272c;
+}
+
+.hover__text-gray--400 {
+  transform: 0.3s;
+}
+.hover__text-gray--400:hover {
+  color: #27272c;
+}
+
+.bg__gray--500 {
+  background-color: #18181b;
+}
+
+.text__gray--500 {
+  color: #18181b;
+}
+
+.hover__bg-gray--500 {
+  transition: 0.3s;
+}
+.hover__bg-gray--500:hover {
+  background-color: #18181b;
+}
+
+.hover__text-gray--500 {
+  transform: 0.3s;
+}
+.hover__text-gray--500:hover {
+  color: #18181b;
+}
+
+.bg__white {
+  background-color: #ffffff;
+}
+
+.text__white {
+  color: #ffffff;
+}
+
+.hover__bg-white {
+  transition: 0.3s;
+}
+.hover__bg-white:hover {
+  background-color: #ffffff;
+}
+
+.hover__text-white {
+  transform: 0.3s;
+}
+.hover__text-white:hover {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=_mixins.css.map */
