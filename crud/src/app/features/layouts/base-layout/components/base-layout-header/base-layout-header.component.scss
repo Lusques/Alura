@@ -9,4 +9,12 @@
   &__subtitle {
     font-size: 12px;
   }
+  &__buttons {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  &__button {
+    flex-grow: 1;
+  }
 }

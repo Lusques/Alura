@@ -4,5 +4,13 @@
       Salve suas ideias com notas online
     </p>
     <h1 class="text-center base__title m-0">guardanotas ✍️</h1>
+    <div class="base__buttons">
+      <app-base-button [styleClass]="'base__button'" routerLink="/dashboard/new-quote">
+        Nova nota
+      </app-base-button>
+      <app-base-button [styleClass]="'base__button'" routerLink="/dashboard/quote-board">
+        Quadro de notas
+      </app-base-button>
+    </div>
   </div>
 </header>

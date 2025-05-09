@@ -1,6 +1,7 @@
 <button
   type="button"
   class="base-button btn btn-primary"
+  [class]="styleClass"
   [ngClass]="{
     'base-button--primary': variant === 'primary',
     'base-button--neutral': variant === 'neutral'
