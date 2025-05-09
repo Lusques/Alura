@@ -1,15 +1,19 @@
 <section class="quote-page">
   <div class="container">
     <form class="quote-page__form bg__gray--400">
-      <app-form-input
-        id="author"
-        label="Nome do autor"
-        placeholder="Nome do autor"
-        type="email"
-      ></app-form-input>
-      <app-form-textarea></app-form-textarea>
-      <app-base-button variant="neutral">Cancelar</app-base-button>
-      <app-base-button>Adicionar</app-base-button>
+      <fieldset class="quote-page__fieldset">
+        <app-form-input
+          id="author"
+          label="Nome do autor"
+          placeholder="Nome do autor"
+          type="email"
+        ></app-form-input>
+        <app-form-textarea></app-form-textarea>
+      </fieldset>
+      <fieldset class="quote-page__fieldset quote-page__fieldset--flex">
+        <app-base-button variant="neutral">Cancelar</app-base-button>
+        <app-base-button>Adicionar</app-base-button>
+      </fieldset>
     </form>
   </div>
 </section>
