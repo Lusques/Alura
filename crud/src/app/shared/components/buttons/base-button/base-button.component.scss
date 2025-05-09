@@ -1,0 +1,12 @@
+.base-button {
+  border: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  width: 100%;
+  &--primary {
+    background-color: var(--blue--100);
+  }
+  &--neutral {
+    background-color: var(--gray--300);
+  }
+}

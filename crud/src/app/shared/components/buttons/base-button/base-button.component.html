@@ -1,0 +1,10 @@
+<button
+  type="button"
+  class="base-button btn btn-primary"
+  [ngClass]="{
+    'base-button--primary': variant === 'primary',
+    'base-button--neutral': variant === 'neutral'
+  }"
+>
+  <ng-content></ng-content>
+</button>
